@@ -1,0 +1,101 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    xmlns:nBehaviors="clr-namespace:nRoute.Behaviors" 
+	xmlns:nComponents="clr-namespace:nRoute.Components" 
+	xmlns:nNavigation="clr-namespace:nRoute.Navigation"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    x:Class="nRoute.Themes.AboutError" 
+	nNavigation:Navigation.Title="Navigation Problem"
+    d:DesignWidth="700" d:DesignHeight="600">
+
+    <UserControl.Resources>
+        <nComponents:ValueConverterRelay x:Key="TitleConverterRelay" />
+        <nComponents:ValueConverterRelay x:Key="SubTitleConverterRelay" />
+        <nComponents:ValueConverterRelay x:Key="ReturnUrlConverterRelay" />
+        <nComponents:ValueConverterRelay x:Key="RetryUrlConverterRelay" />
+    </UserControl.Resources>
+
+    <Grid Height="Auto" Width="Auto" Background="White">
+        
+        <Path Stretch="Fill" Stroke="#FF769CFF" Height="3" Margin="22,74,30,0" VerticalAlignment="Top" 
+              Data="M22,100 L668.02789,100" StrokeThickness="3" />
+        
+        <TextBlock HorizontalAlignment="Right" Margin="0,5,34,0" Text="i" TextWrapping="Wrap" FontFamily="Webdings" FontSize="96" Height="69" 
+                   VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+        	<TextBlock.Foreground>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="White" Offset="0"/>
+        			<GradientStop Color="#FF769CFF" Offset="0.56"/>
+        		</LinearGradientBrush>
+        	</TextBlock.Foreground>
+        </TextBlock>
+        
+        <TextBlock Margin="24,32,130,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="42.667" Foreground="#FF69666E" 
+                   Text="{Binding ResponseStatus, Converter={StaticResource TitleConverterRelay}, Mode=OneWay}" TextWrapping="NoWrap"/>
+        
+        <StackPanel Margin="27,82,35,30" d:LayoutOverrides="Width">
+            
+            <TextBlock x:Name="SubTitleText" Height="24" VerticalAlignment="Top" FontFamily="Arial" FontSize="17.333" Foreground="#FF586C84"
+                       Text="{Binding ResponseStatus, Converter={StaticResource SubTitleConverterRelay}, Mode=OneWay}"
+                       TextWrapping="NoWrap" Margin="0,0,0,16"/>
+
+            <TextBlock x:Name="ErrorMessageText" Foreground="#FF5C6374" Text="{Binding Error.Message, Mode=OneWay}" TextWrapping="Wrap" Margin="0,0,0,10" FontSize="12.667">
+        		<i:Interaction.Behaviors>
+        			<nBehaviors:NullValueVisibilityBehavior Value="{Binding Error, Mode=OneWay}"/>
+        		</i:Interaction.Behaviors>
+            </TextBlock>
+            
+            <TextBlock x:Name="NavigateReturnText" Cursor="Hand" HorizontalAlignment="Left" Margin="0,0,0,4" 
+				VerticalAlignment="Bottom" Text="{Binding RefererRequest, Converter={StaticResource ReturnUrlConverterRelay}, Mode=OneWay}" 
+				TextDecorations="Underline" Foreground="#FF73A9D8"  MouseLeftButtonUp="Link_NavigateReturn"
+				MouseEnter="Link_MouseEnter" MouseLeave="Link_MouseLeave" FontSize="12">
+        		<i:Interaction.Behaviors>
+        			<nBehaviors:NullValueVisibilityBehavior Value="{Binding RefererRequest, Mode=OneWay}"/>
+        		</i:Interaction.Behaviors>
+            </TextBlock>
+            
+            <TextBlock x:Name="NavigateRetryText" Cursor="Hand" HorizontalAlignment="Left" Margin="0,0,0,4" 
+				VerticalAlignment="Bottom" Text="{Binding Request, Converter={StaticResource RetryUrlConverterRelay}, Mode=OneWay}" 
+				TextDecorations="Underline" Foreground="#FF73A9D8"	 MouseLeftButtonUp="Link_NavigateRetry"			
+				MouseEnter="Link_MouseEnter" MouseLeave="Link_MouseLeave" FontSize="12">
+				<i:Interaction.Behaviors>
+					<nBehaviors:NullValueVisibilityBehavior Value="{Binding Request, Mode=OneWay}"/>
+				</i:Interaction.Behaviors>
+            </TextBlock>
+
+            <TextBlock x:Name="NavigateBackText" Cursor="Hand" HorizontalAlignment="Left" Margin="0,0,0,4" 
+				VerticalAlignment="Bottom" Text="Navigate Back" 
+				TextDecorations="Underline" Foreground="#FF73A9D8"	 MouseLeftButtonUp="Link_NavigateBack"			
+				MouseEnter="Link_MouseEnter" MouseLeave="Link_MouseLeave" FontSize="12">
+				<i:Interaction.Behaviors>
+					<nBehaviors:NullValueVisibilityBehavior Value="{Binding DirectionalNavigationHandler, Mode=OneWay}"/>
+				</i:Interaction.Behaviors>
+            </TextBlock>
+
+            <TextBlock x:Name="MoreInfoText" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+				Text="Click for Error Details" Margin="0,0,0,8" TextDecorations="Underline"
+				MouseEnter="Link_MouseEnter" MouseLeave="Link_MouseLeave" 
+				Foreground="#FF73A9D8" FontSize="12">
+        		<i:Interaction.Behaviors>
+        			<nBehaviors:NullValueVisibilityBehavior Value="{Binding Error, Mode=OneWay}"/>
+        		</i:Interaction.Behaviors>
+        		<i:Interaction.Triggers>
+        			<i:EventTrigger EventName="MouseLeftButtonUp">
+        				<nBehaviors:TargetedSetPropertyAction TargetName="textBox" PropertyName="Visibility" Value="Visible"/>
+        			</i:EventTrigger>
+        		</i:Interaction.Triggers>
+            </TextBlock>
+            
+            <TextBox x:Name="textBox" Text="{Binding Error, Mode=OneWay}" TextWrapping="Wrap" 
+				Height="150" AcceptsReturn="True" IsReadOnly="True" BorderThickness="1" 
+				BorderBrush="#FFBDBDBD" VerticalScrollBarVisibility="Visible" Background="White" 
+				Visibility="Collapsed" FontSize="12"/>
+            
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
