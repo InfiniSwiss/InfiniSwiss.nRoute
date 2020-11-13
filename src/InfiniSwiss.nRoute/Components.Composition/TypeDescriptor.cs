@@ -97,12 +97,16 @@ namespace nRoute.Components.Composition
                 }
             }
 
-            // else we try to get a public and parameter-less constructor
+            // else we try to get a public and parameter-less constructor or if there's a single constructor, we'll take that
             if (_resolveConstructor == null)
             {
                 _resolveConstructor = DescriptorType.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, EMPTY_PARAMETERS, null);
                 if (_resolveConstructor == null)
                     _resolveConstructor = DescriptorType.GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance, null, EMPTY_PARAMETERS, null);
+                if (_resolveConstructor == null && _constructorInfos.Length == 1)
+                {
+                    _resolveConstructor = _constructorInfos[0];
+                }
                 if (_resolveConstructor == null)
                     throw new ResolveResourceException(string.Format(BUILD_MUSTHAVE_DEFAULTCONST, DescriptorType.FullName), DescriptorType);
             }

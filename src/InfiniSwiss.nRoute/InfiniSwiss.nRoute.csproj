@@ -3,7 +3,22 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/InfiniSwiss/InfiniSwiss.nRoute</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/InfiniSwiss/InfiniSwiss.nRoute</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Infiniswiss, nRoute, WPF, Dependency Injection, Navigation</PackageTags>
+    <Description>A small library for WPF Routing adapted to net 5.0 from https://nroute.codeplex.com/ with async support added.</Description>
+    <Version>1.0.0.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />

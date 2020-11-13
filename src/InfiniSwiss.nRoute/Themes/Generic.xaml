@@ -41,7 +41,7 @@
 		</Setter>
 	</Style>
 
-    <Style TargetType="nRoute:NavigationContainer">
+    <Style x:Key="DefaultStyleNavigationContainer" TargetType="nRoute:NavigationContainer">
         <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="Foreground" Value="#FF000000"/>
 		<Setter Property="Background" Value="Transparent"/>
@@ -221,4 +221,6 @@
         </Setter>
     </Style>
 
+    <Style TargetType="nRoute:NavigationContainer" BasedOn="{StaticResource DefaultStyleNavigationContainer}" />
+    <Style TargetType="nRoute:BrowsingContainer" BasedOn="{StaticResource DefaultStyleNavigationContainer}"/>
 </ResourceDictionary>
