@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="nRoute.Components.Messaging.Channel">
+    <Position X="3.75" Y="0.5" Width="3" />
+    <Members>
+      <Field Name="_invokerGenericType" Hidden="true" />
+      <Field Name="_invokers" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Method Name="Channel" Hidden="true" />
+      <Method Name="GetChannelInvoker" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="nRoute.Components.Messaging.Channel.ChannelInvoker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Messaging\Channel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Messaging.Channel.ChannelInvoker&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Messaging\Channel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAgAEAAAAAAAABCAABAAgAAAAAAAAA=</HashCode>
+      <FileName>Components.Messaging\Channel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.ChannelObserver&lt;T&gt;">
+    <Position X="7" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="_errorHandler" Hidden="true" />
+      <Field Name="_key" Hidden="true" />
+      <Field Name="_payloadFilter" Hidden="true" />
+      <Field Name="_payloadHandler" Hidden="true" />
+      <Field Name="_unsubscriberToken" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnCompleted" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnError" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnNext" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACCAgAgAAACAAAAAACACAAAAQAAAAAEAAAg=</HashCode>
+      <FileName>Components.Messaging\ChannelObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

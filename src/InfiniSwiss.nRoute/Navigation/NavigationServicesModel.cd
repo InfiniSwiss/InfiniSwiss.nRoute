@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Navigation.NavigationRequest">
+    <Position X="12.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="NavigationRequest" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABABA=</HashCode>
+      <FileName>Navigation\NavigationRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.NavigationService">
+    <Position X="15.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_defaultNavigationHandler" Hidden="true" />
+      <Field Name="_handlersLock" Hidden="true" />
+      <Field Name="_navigationHandlers" Hidden="true" />
+      <Field Name="_routesLock" Hidden="true" />
+      <Field Name="ABOUT_BLANK" Hidden="true" />
+      <Field Name="AREA_COULDNOT_INITIALIZE" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="MapAllRegisteredRoutes" Hidden="true" />
+      <Method Name="MapLocatorRoute" Hidden="true" />
+      <Method Name="NavigationService" Hidden="true" />
+      <Method Name="Notify" Hidden="true" />
+      <Method Name="Route_CollectionChanged" Hidden="true" />
+      <Method Name="SetupRoutes" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEACAACAECAAQAAAAARAAAIBAAEBgFCAAAQBEIACAQ=</HashCode>
+      <FileName>Navigation\NavigationService.Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Routing.RoutingService">
+    <Position X="15.75" Y="4.5" Width="2.25" />
+    <Members>
+      <Method Name="OnResolveRequest" Hidden="true" />
+      <Method Name="OnResolveResponse" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAABgACAAAAAABAQAAAAQCAABAAIAAIAAgAAAgA=</HashCode>
+      <FileName>Components.Routing\RoutingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.NavigationResponse">
+    <Position X="12.25" Y="3.25" Width="2" />
+    <Members>
+      <Method Name="NavigationResponse" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Navigation\NavigationResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Routing.UrlRequest">
+    <Position X="10" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="_requestParameters" Hidden="true" />
+      <Field Name="INVALID_ROUTE_URL" Hidden="true" />
+      <Method Name="UrlRequest" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAABQQAAAAAQAgBBAAAAAAAAAAAAAAAQAAgAAAQA=</HashCode>
+      <FileName>Components.Routing\UrlRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Routing.UrlResponse">
+    <Position X="10" Y="3.25" Width="1.75" />
+    <Members>
+      <Field Name="_content" Hidden="true" />
+      <Field Name="_error" Hidden="true" />
+      <Field Name="_request" Hidden="true" />
+      <Field Name="_responseParameters" Hidden="true" />
+      <Field Name="_responseStatus" Hidden="true" />
+      <Method Name="UrlResponse" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgEAAQBBQAAAAAAAAAAAoAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\UrlResponse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.MapNavigationContentAttribute" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\MapNavigationContentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefineNavigationContentAttribute" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAA=</HashCode>
+      <FileName>Navigation.Mapping\DefineNavigationContentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationResourceHandler" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAwAAAAAQQgABBAAAAAAIADiMAEhQAAAEBAAAAAE=</HashCode>
+      <FileName>Navigation.Mapping\NavigationResourceHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationContentHandler" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAgEAAgAAAAEBAAAAAE=</HashCode>
+      <FileName>Navigation.Mapping\NavigationContentHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationLocatorRouteHandlerProxy" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\NavigationLocatorRouteHandlerProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.MapNavigationBaseAttribute">
+    <Position X="0.75" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="_url" Hidden="true" />
+      <Method Name="GetResourceType" Hidden="true" />
+      <Method Name="MapNavigationBaseAttribute" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAQAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\MapNavigationBaseAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefineNavigationResourceAttribute" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAAAIAAAAAAAAIAAAIAAAAAAAAUAAQAAA=</HashCode>
+      <FileName>Navigation.Mapping\DefineNavigationResourceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Routing.IRoutingContext">
+    <Position X="18.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Components.Routing\IRoutingContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IUrlRequest">
+    <Position X="8" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IUrlRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IUrlResponse">
+    <Position X="8" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgEAAQAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IUrlResponse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IRouteHandler" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IRouteHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.INavigationHandler">
+    <Position X="18.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Navigation\INavigationHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="nRoute.Components.Routing.ResponseStatus">
+    <Position X="18.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAIAAAAAAEAAgAAAAIAAAhAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\ResponseStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

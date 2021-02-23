@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Navigation.Containers.PageContentState">
+    <Position X="15" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAAAAACAAAAAQAAAAACAAABAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\PageContentState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Containers.NavigatingCancelEventArgs">
+    <Position X="9.5" Y="3" Width="2" />
+    <Members>
+      <Field Name="_request" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\NavigatingCancelEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Containers.NavigationContainerEventArgs">
+    <Position X="10.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_container" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\NavigationContainerEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Containers.NavigatedEventArgs">
+    <Position X="10.75" Y="5.75" Width="2" />
+    <Members>
+      <Field Name="_request" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\NavigatedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Containers.NavigationFailedEventArgs">
+    <Position X="12" Y="3" Width="2" />
+    <Members>
+      <Field Name="_error" Hidden="true" />
+      <Field Name="_request" Hidden="true" />
+      <Field Name="_status" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEAAAAAQAAQAAAAAAAAAAAoAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\NavigationFailedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controls.NavigationContainer" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEggAIAABAAABAAAAgAEAoCAAAAAAAAAEAQAAAgACA=</HashCode>
+      <FileName>Controls\NavigationContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.NavigationContentControl" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMQAAAgIBABMAFQhSCEAMCgAQAAKAACEASAABAAAk=</HashCode>
+      <FileName>Controls\NavigationContentControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.StatefulContainer" Collapsed="true">
+    <Position X="3.75" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAIEAAAAEACiAAAEAAEAAAEAAAAAAAA=</HashCode>
+      <FileName>Controls\StatefulContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.BrowsingContainer" Collapsed="true">
+    <Position X="3.75" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAwABAAAAAAAgAJFAAABEgCCAAAAIEFAAAFAAABAAAA=</HashCode>
+      <FileName>Controls\BrowsingContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.StatefulBrowsingContainer" Collapsed="true">
+    <Position X="3.75" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEwABAAAAAAAgAJFAAABEgCiAAAEIEHAAAFAAABAAAA=</HashCode>
+      <FileName>Controls\StatefulBrowsingContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="nRoute.Navigation.Containers.IBrowsingContainer" HideInheritanceLine="true">
+    <Position X="0.75" Y="5.5" Width="2.25" />
+    <InheritanceLine Type="nRoute.Navigation.Containers.ISupportDirectionalNavigation" IsHidden="true" />
+    <InheritanceLine Type="nRoute.Navigation.Containers.ISupportJournalPurging" IsHidden="true" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\IBrowsingContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.Containers.INavigationContainer">
+    <Position X="0.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAgAAAEAAAAAAAAAAAAAAAAAACAAQAAAAACA=</HashCode>
+      <FileName>Navigation.Containers\INavigationContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.Containers.IStatefulContainer" HideInheritanceLine="true">
+    <Position X="0.75" Y="7.5" Width="2.25" />
+    <InheritanceLine Type="nRoute.Navigation.Containers.ISupportJournalPurging" IsHidden="true" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\IStatefulContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.INavigationHandler">
+    <Position X="0.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Navigation\INavigationHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.ISupportNavigationLifecycle" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAUAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation\ISupportNavigationLifecycle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.ISupportNavigationState" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation\ISupportNavigationState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.Containers.ISupportDirectionalNavigation">
+    <Position X="6.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAABAAAAAAAAAEBAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\ISupportDirectionalNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.Containers.ISupportJournalPurging">
+    <Position X="6.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAEAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\ISupportJournalPurging.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Navigation.Containers.ISupportRefreshNavigation">
+    <Position X="6.5" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Containers\ISupportRefreshNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="nRoute.Navigation.NavigateMode">
+    <Position X="15" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAABAACAAAAAAAAAAAAAAAAAAAAAAAAAAABI=</HashCode>
+      <FileName>Navigation\NavigationMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

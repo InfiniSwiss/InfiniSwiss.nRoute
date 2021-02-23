@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Components.Routing.RouteTable">
+    <Position X="5.5" Y="3.5" Width="2" />
+    <Members>
+      <Field Name="_instance" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\RouteTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Routing.RoutingService">
+    <Position X="3" Y="3.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAABgACAAAAAABAQAAAAQCAABAAIAAIAAgAAAgA=</HashCode>
+      <FileName>Components.Routing\RoutingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Routing.IRouteHandler">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IRouteHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IUrlResponse">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgEAAQAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IUrlResponse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IRoutingContext">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Components.Routing\IRoutingContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Routing.IUrlRequest">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IUrlRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="nRoute.Components.Routing.ResponseStatus">
+    <Position X="5.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAIAAAAAAEAAgAAAAIAAAhAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\ResponseStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

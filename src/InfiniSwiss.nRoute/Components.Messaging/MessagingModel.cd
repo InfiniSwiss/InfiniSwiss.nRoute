@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Components.Messaging.Channel&lt;T&gt;">
+    <Position X="9.75" Y="1.75" Width="2.25" />
+    <Members>
+      <Field Name="_channelsLock" Hidden="true" />
+      <Field Name="_instanceLock" Hidden="true" />
+      <Field Name="_privateChannels" Hidden="true" />
+      <Field Name="_publicChannel" Hidden="true" />
+      <Field Name="_subscriptions" Hidden="true" />
+      <Method Name="Channel" Hidden="true" />
+      <Field Name="CHANNEL_CANNOTBE_CLOSED" Hidden="true" />
+      <Field Name="CHANNEL_WITHKEY_EXISTS" Hidden="true" />
+      <Method Name="PublishInternal" Hidden="true" />
+      <Method Name="PurgeSubscriptions" Hidden="true" />
+      <Method Name="Unsubscribe" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAQAIAAAAQgAAACQDAIACAEAAAQAMIQAACAAwQQBg=</HashCode>
+      <FileName>Components.Messaging\ChannelOfT.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Messaging.ChannelObserver&lt;T&gt;">
+    <Position X="14.75" Y="0.75" Width="2.25" />
+    <Members>
+      <Field Name="_payloadFilter" Hidden="true" />
+      <Field Name="_payloadHandler" Hidden="true" />
+      <Field Name="_unsubscriberToken" Hidden="true" />
+      <Method Name="ChannelObserver" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnCompleted" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnError" Hidden="true" />
+      <Method Name="IObserver&lt;T&gt;.OnNext" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACCAgAgAAACAAAAAACACAAAAQAAAAAEAAAg=</HashCode>
+      <FileName>Components.Messaging\ChannelObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Messaging.ChannelSubscriptionBase&lt;T&gt;" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACAAAAAAACAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Messaging\ChannelSubscriptionBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Messaging.MapChannelObserverAttribute">
+    <Position X="18.25" Y="0.75" Width="2.75" />
+    <Members>
+      <Field Name="_channelType" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_observerGenericType" Hidden="true" />
+      <Method Name="GetResourceLocator" Hidden="true" />
+      <Method Name="GetResourceType" Hidden="true" />
+      <Property Name="IsDefaultResource" Hidden="true" />
+      <Method Name="MapChannelObserverAttribute" Hidden="true" />
+      <Field Name="MUST_BE_IMPLEMENTATION_TYPE" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAIQAAAAAAAiIABAAAAAAAAAAAAAAAAEQAUAAAAAA=</HashCode>
+      <FileName>Components.Messaging\MapChannelObserverAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.DefaultChannelObserverLocator">
+    <Position X="26.25" Y="1.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEQAAEACAAAAAgAAAAAAIAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Components.Messaging\DefaultChannelObserverLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.ChannelObserverLocator">
+    <Position X="21.25" Y="0.75" Width="3.5" />
+    <Members>
+      <Field Name="_observerGenericType" Hidden="true" />
+      <Method Name="GetObserverTypeForChannel" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAIAAAAAABAAAAAIAQAgAAAAAA=</HashCode>
+      <FileName>Components.Messaging\ChannelObserverLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.ChannelSubscription&lt;T&gt;" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Components.Messaging\ChannelSubscription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.WeakChannelSubscription&lt;T&gt;">
+    <Position X="12.25" Y="2.75" Width="2.25" />
+    <Members>
+      <Field Name="_subscriber" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Components.Messaging\WeakChannelSubscription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Messaging.Channel" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="2.25" />
+    <NestedTypes>
+      <Class Name="nRoute.Components.Messaging.Channel.ChannelInvoker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Messaging\Channel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Messaging.Channel.ChannelInvoker&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Messaging\Channel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAgAEAAAAAAAABCAABAAgAAAAAAAAA=</HashCode>
+      <FileName>Components.Messaging\Channel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Composition.IResourceLocator" Collapsed="true" HideInheritanceLine="true">
+    <Position X="26.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\IResourceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.Messaging.IChannel&lt;T&gt;">
+    <Position X="3.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Messaging\IChannelOfT.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.ISubject&lt;T&gt;">
+    <Position X="3.25" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\ISubjectOfT.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Components.ISubject&lt;T1, T2&gt;">
+    <Position X="3.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\ISubjectOfT1T2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="System.IObserver&lt;T&gt;">
+    <Position X="4.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="System.IObservable&lt;T&gt;">
+    <Position X="2" Y="0.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="nRoute.Components.Messaging.ThreadOption">
+    <Position X="18.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Components.Messaging\ThreadOption.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="nRoute.Components.Composition.InstanceLifetime">
+    <Position X="20.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\InstanceLifetime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="nRoute.Components.Composition.InitializationMode">
+    <Position X="22.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAA=</HashCode>
+      <FileName>Components.Composition\InitializationMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

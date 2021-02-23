@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.ViewModels.DefaultViewModelLocator">
+    <Position X="6" Y="1.75" Width="2" />
+    <Members>
+      <Field Name="_meta" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAQAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAg=</HashCode>
+      <FileName>ViewModels\DefaultViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.ViewModels.ViewModelLocator">
+    <Position X="3.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAEAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.ViewModels.MapViewModelAttribute" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAA=</HashCode>
+      <FileName>ViewModels\MapViewModelAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.ViewModels.MapViewAttribute" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ViewModels\MapViewAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.ViewModels.ViewModelMeta" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAABAAAAAAAgAQAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelMeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.ViewModels.IViewModelProvider">
+    <Position X="3.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IViewModelProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

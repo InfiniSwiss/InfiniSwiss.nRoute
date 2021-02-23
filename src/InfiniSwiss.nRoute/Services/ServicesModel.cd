@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Services.ServiceLocator">
+    <Position X="6" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>Services\ServiceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Services.DefaultServicesLocator" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAQACAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Services\DefaultServicesLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Services.MapServiceAttribute">
+    <Position X="3.75" Y="2" Width="2" />
+    <Members>
+      <Field Name="_dependencies" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_serviceType" Hidden="true" />
+      <Method Name="CanInitialize" Hidden="true" />
+      <Method Name="GetResourceLocator" Hidden="true" />
+      <Method Name="GetResourceType" Hidden="true" />
+      <Property Name="IsDefaultResource" Hidden="true" />
+      <Method Name="MapServiceAttribute" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIQAAAAAAAAIABAAACABAAABAAAAAAEAAUAAIAAA=</HashCode>
+      <FileName>Services\MapServiceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Services.ServiceMeta">
+    <Position X="8.5" Y="3" Width="1.75" />
+    <Members>
+      <Field Name="_implementationType" Hidden="true" />
+      <Field Name="_initializationMode" Hidden="true" />
+      <Field Name="_lifetime" Hidden="true" />
+      <Field Name="_serviceName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAABAAAAAAAAAAAQAAAAkAEAAAABAQ=</HashCode>
+      <FileName>Services\ServiceMeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="nRoute.Components.Composition.InstanceLifetime">
+    <Position X="3.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\InstanceLifetime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="nRoute.Components.Composition.InitializationMode">
+    <Position X="6" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAA=</HashCode>
+      <FileName>Components.Composition\InitializationMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

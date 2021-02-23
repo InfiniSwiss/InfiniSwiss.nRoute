@@ -10,7 +10,7 @@ namespace nRoute.Controllers
 {
     public static partial class ControllerService
     {
-        private static readonly object _routesLock = new();
+        private static readonly Object _routesLock = new Object();
 
         static ControllerService()
         {
@@ -122,7 +122,8 @@ namespace nRoute.Controllers
                 if (e.Action == NotifyCollectionChangedAction.Add)
                 {
                     // we get the locator
-                    if (e.NewItems[0] is not IResourceLocator _locator) return;
+                    var _locator = e.NewItems[0] as IResourceLocator;
+                    if (_locator == null) return;
 
                     // map the route
                     MapLocatorRoute(_locator);
@@ -130,7 +131,8 @@ namespace nRoute.Controllers
                 else if (e.Action == NotifyCollectionChangedAction.Remove)
                 {
                     // we get the locator
-                    if (e.OldItems[0] is not IResourceLocator _locator) return;
+                    var _locator = e.OldItems[0] as IResourceLocator;
+                    if (_locator == null) return;
 
                     // we get the route
                     var _route = RouteTable.Routes[_locator.ResourceName];
@@ -154,7 +156,8 @@ namespace nRoute.Controllers
 
         private static void MapLocatorRoute(IResourceLocator locator)
         {
-             if (locator.ResourceMeta is not ControllerMeta _navigationMeta) return;
+            var _navigationMeta = locator.ResourceMeta as ControllerMeta;
+            if (_navigationMeta == null) return;
 
             // and we map it to the route, note_ we don't check for any pre-existing routes etc..
             MapRoute(locator.ResourceName, new Route(_navigationMeta.Url, (IRouteHandler)locator.GetResourceInstance()));

@@ -58,8 +58,16 @@ namespace nRoute.Components
                 throw new NotSupportedException("Forward conversion is not defined.");
             }
 
-            var in1 = ReferenceEquals(value, DependencyProperty.UnsetValue) ? default : (TIn)value;
-            return ForwardConversion(in1, parameter);
+            try
+            {
+                var in1 = Object.ReferenceEquals(value, DependencyProperty.UnsetValue) ? default(TIn) : (TIn)value;
+                return ForwardConversion(in1, parameter);
+            }
+            catch (Exception ex)
+            {
+                Debugger.Break();
+                return null;
+            }
         }
 
         public virtual object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -71,7 +79,7 @@ namespace nRoute.Components
 
             try
             {
-                var out1 = ReferenceEquals(value, DependencyProperty.UnsetValue) ? default : (TOut)value;
+                var out1 = Object.ReferenceEquals(value, DependencyProperty.UnsetValue) ? default(TOut) : (TOut)value;
                 return ReverseConversion(out1, parameter);
             }
             catch // (Exception ex)

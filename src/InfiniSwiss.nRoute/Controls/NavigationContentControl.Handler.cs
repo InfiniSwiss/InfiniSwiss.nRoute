@@ -208,6 +208,10 @@ namespace nRoute.Controls
             CurrentNavigationStateSupporter = NavigationService.GetSupporter<ISupportNavigationState>(response.Content);
             CurrentNavigationViewStateSupporter = NavigationService.GetSupporter<ISupportNavigationViewState>(response.Content);
 
+            // we save the url and the content
+            CurrentNavigationRequest = response.Request;
+            SetValue(ContentProperty, response.Content);
+
             // if the content support navigation, we pass in the request/response merged parameters
             if (this.CurrentNavigationLifecycleSupporter != null)
             {
@@ -221,9 +225,6 @@ namespace nRoute.Controls
                 Title = nRoute.Navigation.Navigation.GetTitle(response.Content as DependencyObject);
             }
 
-            // we save the url and the content
-            CurrentNavigationRequest = response.Request;
-            SetValue(ContentProperty, response.Content);
             TransitionToNavigationState(Controls.NavigationState.Navigated);
 
             // and once we have set the transition state, then we call the view's initialize

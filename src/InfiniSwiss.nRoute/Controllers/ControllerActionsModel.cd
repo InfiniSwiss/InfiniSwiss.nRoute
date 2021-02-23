@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Notes: &#xD;&#xA;- An ActionRequest represents a call-to action&#xD;&#xA;- The IRouteHandler for an action's Url (should) resolves an ControllerActionHandler&#xD;&#xA;- The ControllerActionHandler resolves an response in the form of ActionContext&#xD;&#xA;- The ActionContext contains the Controller that will be used to execute the request&#xD;&#xA;- So basically, the routes resolve the Controller - which is executed by the ControllerActionService&#xD;&#xA;- Also, note the ">
+    <Position X="0.5" Y="0.5" Height="1.302" Width="11.877" />
+  </Comment>
+  <Class Name="nRoute.Controllers.ActionContext">
+    <Position X="7.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers\ActionContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ActionControllerHandler">
+    <Position X="2.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAIBAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ActionControllerHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.ActionRequest">
+    <Position X="0.5" Y="2" Width="2" />
+    <Members>
+      <Field Name="_sender" Hidden="true" />
+      <Method Name="ActionRequest" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ActionControllers\ActionRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.ControllerBase">
+    <Position X="5.25" Y="3.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQUAAAAhAAAAIAAAAQAACEAAoAAAAAQ=</HashCode>
+      <FileName>ActionControllers\ControllerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.ActionControllerService">
+    <Position X="10.25" Y="2" Width="2" />
+    <Members>
+      <Field Name="_routesLock" Hidden="true" />
+      <Method Name="ActionControllerService" Hidden="true" />
+      <Field Name="AREA_COULDNOT_INITIALIZE" Hidden="true" />
+      <Method Name="MapAllRegisteredRoutes" Hidden="true" />
+      <Method Name="MapLocatorRoute" Hidden="true" />
+      <Method Name="Route_CollectionChanged" Hidden="true" />
+      <Method Name="SetupRoutes" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAQQAAAAQAAAIAAAABgACAAAAAAIACAA=</HashCode>
+      <FileName>ActionControllers\ActionControllerService.Execute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Routing.IRouteHandler">
+    <Position X="2.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IRouteHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Controllers.IController">
+    <Position X="5.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers\IController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

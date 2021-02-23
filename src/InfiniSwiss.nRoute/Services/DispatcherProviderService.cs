@@ -6,6 +6,6 @@ namespace nRoute.Services
     {
         public IDispatcher Dispatcher { get; } = new WpfDispatcherAdapter();
 
-        public IScheduler DispatcherScheduler => Scheduler.Default;
+        public IScheduler DispatcherScheduler => System.Reactive.Concurrency.DispatcherScheduler.Current;
     }
 }

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="These are the attributes we apply, we have two main types of navigation types - one, which we call content which basically are any xaml files / user controls. The second types are resources, which means things like embedded images, loose xaml, text files, etc.">
+    <Position X="0.552" Y="5.74" Height="1.49" Width="2.7" />
+  </Comment>
+  <Comment CommentText="These are the meta-data classes that hold the info about the resource we map with our attributes, these we pass to our IResourceLocator implementations. Also, again we have two types of meta-data classes - one for navigatable content and the other for navigatable resources.">
+    <Position X="3.75" Y="5.75" Height="1.469" Width="2.565" />
+  </Comment>
+  <Comment CommentText="We again have two IResourceLocators, one for navigation content and other for navigation resources. Both of these are stored in the IRouteHandler Catalog - and ofcourse they both yield IRouteHandlers that are then used by routing engine.">
+    <Position X="6.677" Y="5.76" Height="1.448" Width="2.595" />
+  </Comment>
+  <Comment CommentText="Route Handlers, are what handle the navigation request. And here we have two handlers that realize content and resource.">
+    <Position X="9.709" Y="5.75" Height="1.417" Width="2.335" />
+  </Comment>
+  <Comment CommentText="Navigation Content Related">
+    <Position X="0.5" Y="1.625" Height="0.292" Width="11.492" />
+  </Comment>
+  <Comment CommentText="Navigation Resources Related">
+    <Position X="0.552" Y="4.187" Height="0.292" Width="11.45" />
+  </Comment>
+  <Class Name="nRoute.Navigation.Mapping.DefaultNavigationResourceLocator" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="2.5" />
+    <InheritanceLine Type="nRoute.Navigation.Mapping.DefaultNavigationLocatorBase" ManuallyRouted="true">
+      <Path>
+        <Point X="8" Y="1.062" />
+        <Point X="8" Y="2" />
+        <Point X="6.5" Y="2" />
+        <Point X="6.5" Y="4.625" />
+        <Point X="8" Y="4.625" />
+        <Point X="8" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>Navigation.Mapping\DefaultNavigationResourceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.MapNavigationBaseAttribute" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAQAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\MapNavigationBaseAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.MapNavigationContentAttribute" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\MapNavigationContentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefineNavigationResourceAttribute" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAAAIAAAAAAAAIAAAIAAAAAAAAUAAQAAA=</HashCode>
+      <FileName>Navigation.Mapping\DefineNavigationResourceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationContentMeta" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\NavigationContentMeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationResourceMeta" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="2.5" />
+    <InheritanceLine Type="nRoute.Navigation.Mapping.NavigationMetaBase" ManuallyRouted="true">
+      <Path>
+        <Point X="5" Y="1.062" />
+        <Point X="5" Y="2" />
+        <Point X="3.5" Y="2" />
+        <Point X="3.5" Y="4.573" />
+        <Point X="5" Y="4.573" />
+        <Point X="5" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAAAIBAAAAAAAAAAAAAAAAAAAAQCEABAA=</HashCode>
+      <FileName>Navigation.Mapping\NavigationResourceMeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefaultNavigationContentLocator" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>Navigation.Mapping\DefaultNavigationContentLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationContentHandler" Collapsed="true">
+    <Position X="9.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAECAAAAAAAAAAAAAAgAEgEAAAAAAAADAAAAAE=</HashCode>
+      <FileName>Navigation.Mapping\NavigationContentHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationResourceHandler" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ICAAAwAAAAAQQgABBAAAAAAIADiMAEBQAAAABAAAAAE=</HashCode>
+      <FileName>Navigation.Mapping\NavigationResourceHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefineNavigationContentAttribute" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAA=</HashCode>
+      <FileName>Navigation.Mapping\DefineNavigationContentAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.NavigationMetaBase" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Navigation.Mapping\NavigationMetaBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Navigation.Mapping.DefaultNavigationLocatorBase" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAABCAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAg=</HashCode>
+      <FileName>Navigation.Mapping\DefaultNavigationLocatorBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="nRoute.Components.Routing.IRouteHandler" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Routing\IRouteHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

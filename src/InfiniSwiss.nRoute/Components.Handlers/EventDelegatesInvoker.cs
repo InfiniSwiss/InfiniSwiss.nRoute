@@ -17,8 +17,8 @@ namespace nRoute.Components.Handlers
         private const string DELEGATE_NAME_FORMAT = "_____DelegateInvoker{0}";
 
         private static readonly Dictionary<Type, Func<MethodInfo, DelegateInvoker<E>>> _activators;
-        private static readonly Type _invokerGenericType = typeof(DelegateInvoker<object, E>).GetGenericTypeDefinition();
-        private static readonly object _lock = new();
+        private static readonly Type _invokerGenericType = typeof(DelegateInvoker<Object, E>).GetGenericTypeDefinition();
+        private static readonly Object _lock = new Object();
 
         private DelegateInvoker<E> _invoker;
         private readonly Type _targetType;
@@ -102,46 +102,46 @@ namespace nRoute.Components.Handlers
             where
                 T : class;
 
-        public class DelegateInvoker<EvArgs>
+        public class DelegateInvoker<E>
             where
-               EvArgs : EventArgs
+                E : EventArgs
         {
-            private readonly EventDelegate<EvArgs> _delegate;
+            private readonly EventDelegate<E> _delegate;
 
             protected DelegateInvoker() { }
 
             public DelegateInvoker(MethodInfo method)
             {
                 Guard.ArgumentNotNull(method, "method");
-                _delegate = (EventDelegate<EvArgs>)Delegate.CreateDelegate(typeof(EventDelegate<EvArgs>), method, true);
+                _delegate = (EventDelegate<E>)Delegate.CreateDelegate(typeof(EventDelegate<E>), method, true);
             }
 
-            public virtual void Invoke(object target, Object sender, EvArgs args)
+            public virtual void Invoke(Object target, Object sender, E args)
             {
                 _delegate(sender, args);
             }
         }
 
-        public class DelegateInvoker<T, EvArgs>
-            : DelegateInvoker<EvArgs>
+        public class DelegateInvoker<T, E>
+            : DelegateInvoker<E>
             where
-                EvArgs : EventArgs
+                E : EventArgs
         {
-            private readonly EventDelegate<T, EvArgs> _delegate;
+            private readonly EventDelegate<T, E> _delegate;
 
             public DelegateInvoker(MethodInfo method)
                 : base()
             {
                 Guard.ArgumentNotNull(method, "method");
-                _delegate = (EventDelegate<T, EvArgs>)Delegate.CreateDelegate(typeof(EventDelegate<T, EvArgs>), method, true);
+                _delegate = (EventDelegate<T, E>)Delegate.CreateDelegate(typeof(EventDelegate<T, E>), method, true);
             }
 
-            public override void Invoke(object target, object sender, EvArgs args)
+            public override void Invoke(object target, object sender, E args)
             {
                 this.Invoke((T)target, sender, args);
             }
 
-            public void Invoke(T target, object sender, EvArgs args)
+            public void Invoke(T target, object sender, E args)
             {
                 _delegate(target, sender, args);
             }

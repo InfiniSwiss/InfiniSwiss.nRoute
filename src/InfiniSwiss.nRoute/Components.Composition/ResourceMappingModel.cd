@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Components.Messaging.MapChannelObserverAttribute" Collapsed="true">
+    <Position X="9" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAIQAAAAAAAiIABAAAAAAAAAAAAAAAAEQAUAAAAAA=</HashCode>
+      <FileName>Components.Messaging\MapChannelObserverAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Modules.MapModuleAttribute" Collapsed="true">
+    <Position X="11.25" Y="4" Width="2" />
+    <InheritanceLine Type="nRoute.Components.Composition.MapResourceBaseAttribute" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="2.569" />
+        <Point X="12.5" Y="2.76" />
+        <Point X="11.148" Y="2.76" />
+        <Point X="11.148" Y="3.846" />
+        <Point X="12.25" Y="3.846" />
+        <Point X="12.25" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAQgAAABAAAAAAAAAAAAAAAAAAIUAAAAAA=</HashCode>
+      <FileName>Modules\MapModuleAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Services.MapServiceAttribute" Collapsed="true">
+    <Position X="13.5" Y="3" Width="2" />
+    <InheritanceLine Type="nRoute.Components.Composition.MapResourceBaseAttribute" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="2.569" />
+        <Point X="12.5" Y="2.76" />
+        <Point X="14.5" Y="2.76" />
+        <Point X="14.5" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIQAAAAAAAAIABAAACABAAABAAAAAAEAAUAAIAAA=</HashCode>
+      <FileName>Services\MapServiceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.ViewModels.MapViewViewModelBaseAttribute" Collapsed="true">
+    <Position X="9" Y="4" Width="2" />
+    <InheritanceLine Type="nRoute.Components.Composition.MapResourceBaseAttribute" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="2.569" />
+        <Point X="12.5" Y="2.76" />
+        <Point X="11.148" Y="2.76" />
+        <Point X="11.148" Y="3.846" />
+        <Point X="10" Y="3.846" />
+        <Point X="10" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>ViewModels\MapViewViewModelBaseAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.ViewServices.MapViewServiceAttribute" Collapsed="true">
+    <Position X="13.5" Y="4" Width="2" />
+    <InheritanceLine Type="nRoute.Components.Composition.MapResourceBaseAttribute" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="2.569" />
+        <Point X="12.5" Y="2.76" />
+        <Point X="13.352" Y="2.76" />
+        <Point X="13.352" Y="3.846" />
+        <Point X="14.5" Y="3.846" />
+        <Point X="14.5" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAAAIQAAAAAAAAKABAAAAAAAAAAAAAAAAEAAUBAAAAA=</HashCode>
+      <FileName>ViewServices\MapViewServiceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.Resource">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="_assemblyObserver" Hidden="true" />
+      <Field Name="_invokerGenericType" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Field Name="_pendingMappings" Hidden="true" />
+      <Field Name="_resourcesCatalogs" Hidden="true" />
+      <Field Name="CANNOT_RESOLVE_IRESOURCELOCATOR" Hidden="true" />
+      <Field Name="CANNOT_RESOLVE_LOCATOR" Hidden="true" />
+      <Field Name="CANNOT_RESOLVE_ON" Hidden="true" />
+      <Field Name="CANNOT_RESOLVE_RESOURCE" Hidden="true" />
+      <Method Name="CatalogResource" Hidden="true" />
+      <Method Name="GetResource" Hidden="true" />
+      <Method Name="GetResourceLocator" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="IsAnyResourceRegistered" Hidden="true" />
+      <Method Name="IsNamedResourceRegistered" Hidden="true" />
+      <Method Name="IsResourceRegistered" Hidden="true" />
+      <Method Name="OnAssemblyMapped" Hidden="true" />
+      <Method Name="RegisterResourceLocator" Hidden="true" />
+      <Method Name="ResolveResourceInstance" Hidden="true" />
+      <Method Name="ResolveResourceLocator" Hidden="true" />
+      <Method Name="Resource" Hidden="true" />
+      <Method Name="ResourceCatalogAction" Hidden="true" />
+      <Method Name="ResourceLocatorAction" Hidden="true" />
+      <Method Name="SetDefaultResourceLocator" Hidden="true" />
+      <Method Name="ThrowIfHasUnresolvedMapping" Hidden="true" />
+      <Method Name="TryGetResource" Hidden="true" />
+      <Method Name="TryGetResourceLocator" Hidden="true" />
+      <Method Name="UnregisterResource" Hidden="true" />
+      <Method Name="UnregisterResourceLocator" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="nRoute.Components.Composition.Resource.ResourceInvoker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\Resource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.Resource.ResourceInvoker&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\Resource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.Resource.PendingMapping" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\Resource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BKAACAAIAAAAAeAkIAAAgAAAARFCAAwAAIQAGAgAgQA=</HashCode>
+      <FileName>Components.Composition\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.Resource&lt;T&gt;">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="_defaultResourceName" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Field Name="_resourceCatalog" Hidden="true" />
+      <Field Name="_resources" Hidden="true" />
+      <Method Name="GetEnumerator" Hidden="true" />
+      <Method Name="IEnumerable.GetEnumerator" Hidden="true" />
+      <Method Name="IsAnyResourceRegistered" Hidden="true" />
+      <Method Name="IsNamedResourceRegistered" Hidden="true" />
+      <Method Name="RegisterResourceLocator" Hidden="true" />
+      <Method Name="ResolveResourceInstance" Hidden="true" />
+      <Method Name="ResolveResourceLocator" Hidden="true" />
+      <Method Name="Resource" Hidden="true" />
+      <Field Name="RESOURCE_ALREADYEXISTS" Hidden="true" />
+      <Field Name="RESOURCE_NOTFOUND" Hidden="true" />
+      <Field Name="RESOURCE_NOTNULLOREMPTY" Hidden="true" />
+      <Method Name="ResourceLocatorAction" Hidden="true" />
+      <Method Name="SetDefaultResourceLocator" Hidden="true" />
+      <Property Name="this" Hidden="true" />
+      <Method Name="UnregisterResource" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BCAAAAAAAgAAIJBkKAAQoAIBAAEAAAAMAAAAAAgAAQA=</HashCode>
+      <FileName>Components.Composition\ResourceOfT.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Composition.ResourceLocator">
+    <Position X="5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIAAAAAAAAAAAAgAAAAQAAAAAAAAQAGAAAAAA=</HashCode>
+      <FileName>Components.Composition\ResourceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.MapResourceBaseAttribute">
+    <Position X="11.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAUAAAAAA=</HashCode>
+      <FileName>Components.Composition\MapResourceBaseAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.MapResourceAttribute" Collapsed="true">
+    <Position X="11.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAQAAQ=</HashCode>
+      <FileName>Components.Composition\MapResourceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Composition.IResourceLocator">
+    <Position X="14" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\IResourceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

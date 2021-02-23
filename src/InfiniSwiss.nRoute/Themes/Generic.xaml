@@ -5,7 +5,7 @@
   xmlns:vsm="http://schemas.microsoft.com/netfx/2009/xaml/presentation">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/InfiniSwiss.nRoute;component/Themes/generic.common.xaml" />
+        <ResourceDictionary Source="/nRoute.Framework;component/Themes/generic.common.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="nRoute:NavigationContentControl">
@@ -41,7 +41,7 @@
 		</Setter>
 	</Style>
 
-    <Style x:Key="DefaultStyleNavigationContainer" TargetType="nRoute:NavigationContainer">
+    <Style TargetType="nRoute:NavigationContainer">
         <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="Foreground" Value="#FF000000"/>
 		<Setter Property="Background" Value="Transparent"/>
@@ -221,6 +221,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="nRoute:NavigationContainer" BasedOn="{StaticResource DefaultStyleNavigationContainer}" />
-    <Style TargetType="nRoute:BrowsingContainer" BasedOn="{StaticResource DefaultStyleNavigationContainer}"/>
 </ResourceDictionary>

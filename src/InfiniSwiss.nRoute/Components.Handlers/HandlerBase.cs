@@ -45,6 +45,15 @@ namespace nRoute.Components.Handlers
 
         #region Properties
 
+        [Obsolete]
+        internal Func<Event<E>, bool> Predicate { get; set; }
+
+        [Obsolete]
+        internal Action<HandlerBase<E, H>, Event<E>> PreHandle { get; set; }
+
+        [Obsolete]
+        internal Action<HandlerBase<E, H>, Event<E>> PostHandle { get; set; }
+
         protected Func<Action<Object, E>, H> CreateAction
         {
             get { return _createAction; }
@@ -79,10 +88,13 @@ namespace nRoute.Components.Handlers
         {
             if (disposing)
             {
-                _removeAction?.Invoke(_eventHandler);
+                if (_removeAction != null) _removeAction(_eventHandler);
+                Predicate = null;
+                PreHandle = null;
+                PostHandle = null;
                 _createAction = null;
                 _removeAction = null;
-                _eventHandler = default;
+                _eventHandler = default(H);
                 _isDisposed = true;
             }
         }
@@ -99,6 +111,25 @@ namespace nRoute.Components.Handlers
                 if (handler == null) return;
                 var _handler = handler;
                 var _event = new Event<E>(s, e);
+
+                //if (handler.Predicate != null && !handler.Predicate(_event)) return;
+                var _preHandler = _handler.PreHandle;
+                if (!_handler._isDisposed && _preHandler != null)
+                {
+                    _preHandler(_handler, _event);
+                }
+
+                var _predicate = _handler.Predicate;
+                if (!_handler._isDisposed && (_predicate == null || _predicate(_event)))
+                {
+                    _handler.Handle(s, e);
+                }
+
+                var _postHandler = _handler.PostHandle;
+                if (!_handler._isDisposed && _postHandler != null)
+                {
+                    _postHandler(_handler, _event);
+                }
 
                 // we check if it is disposed, if so then we set the handler to null 
                 if (_handler._isDisposed) handler = null;        // this should remove the lifting

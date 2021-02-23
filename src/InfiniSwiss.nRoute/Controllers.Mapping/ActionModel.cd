@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Gathers Controller Info">
+    <Position X="7.041" Y="4.385" Height="1.083" Width="2.231" />
+  </Comment>
+  <Comment CommentText="Gathers Action Methods Info">
+    <Position X="9.5" Y="4.364" Height="1.083" Width="2.231" />
+  </Comment>
+  <Comment CommentText="IActionInvoker invokes the action resolved for use. ">
+    <Position X="4.531" Y="4.395" Height="1.104" Width="2.252" />
+  </Comment>
+  <Class Name="nRoute.Controllers.Mapping.NonActionAttribute" Collapsed="true">
+    <Position X="17.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\NonActionAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ActionNameAttribute" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAACAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ActionNameAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ActionNameSelectorAttribute" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ActionNameSelectorAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ActionDescriptor" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQEAAAAIQAAAQAAAAAAIACCAAAAgAEBAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ActionDescriptor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ControllerDescriptor" Collapsed="true">
+    <Position X="7" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ControllerDescriptor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ReflectedControllerDescriptor">
+    <Position X="7" Y="1.75" Width="2.25" />
+    <Members>
+      <Field Name="_actionDescriptorCache" Hidden="true" />
+      <Field Name="_controllerType" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Field Name="_selector" Hidden="true" />
+      <Method Name="ReflectedControllerDescriptor" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEADAAAIAAAAAAAgAAAAAAAAAAACAAAAAAEIAAEAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ReflectedControllerDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ReflectedActionDescriptor">
+    <Position X="9.5" Y="1.75" Width="2.25" />
+    <Members>
+      <Field Name="_actionName" Hidden="true" />
+      <Field Name="_controllerDescriptor" Hidden="true" />
+      <Field Name="_methodInfo" Hidden="true" />
+      <Method Name="ReflectedActionDescriptor" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQhAAAAAAAACAQAQAAAAAAAAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ReflectedActionDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ControllerActionInvoker">
+    <Position X="4.5" Y="1.75" Width="2.25" />
+    <Members>
+      <Field Name="_controllerDescriptor" Hidden="true" />
+      <Field Name="_controllerDescriptorsCache" Hidden="true" />
+      <Field Name="_controllerType" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Field Name="ACTION_NOTRESOLVED" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAgQAAAAAAAAACAAAAAAAAIQgAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ControllerActionInvoker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.ControllerBase" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQUAAAAhAAAAIAAAAQAACEAAoAAAAAQ=</HashCode>
+      <FileName>ActionControllers\ControllerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.Controller">
+    <Position X="0.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ActionControllers\Controller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controllers.Mapping.ActionMethodSelectorAttribute" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\ActionMethodSelectorAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Controllers.Mapping.IActionInvoker" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>ActionControllers.Mapping\IActionInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nRoute.Controllers.IController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActionControllers\IController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

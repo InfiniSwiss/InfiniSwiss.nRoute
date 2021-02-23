@@ -303,7 +303,7 @@ namespace nRoute.Components.Routing
             {
                 if (throwException)
                 {
-                    throw;
+                    throw ex;
                 }
                 else
                 {

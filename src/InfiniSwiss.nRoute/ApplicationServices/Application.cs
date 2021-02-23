@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows;
 
 namespace nRoute.ApplicationServices
@@ -61,32 +60,42 @@ namespace nRoute.ApplicationServices
             {
                 _service.StartService(_applicationServiceContext);
 
-                if (_service is IApplicationLifetimeAware aware)
+                if (_service is IApplicationLifetimeAware)
                 {
-                    aware.Starting();
+                    ((IApplicationLifetimeAware)_service).Starting();
                 }
             }
 
             base.OnStartup(e);
 
-            foreach (IApplicationLifetimeAware service in this.ApplicationLifetimeObjects.OfType<IApplicationLifetimeAware>())
+            foreach (IApplicationService service in this.ApplicationLifetimeObjects)
             {
-                service.Started();
+                if (service is IApplicationLifetimeAware)
+                {
+                    ((IApplicationLifetimeAware)service).Started();
+                }
             }
         }
 
         protected override void OnExit(ExitEventArgs e)
         {
-            foreach (IApplicationLifetimeAware service in this.ApplicationLifetimeObjects.OfType<IApplicationLifetimeAware>())
+            foreach (IApplicationService service in this.ApplicationLifetimeObjects)
             {
-                service.Exiting();
+                if (service is IApplicationLifetimeAware)
+                {
+                    ((IApplicationLifetimeAware)service).Exiting();
+                }
             }
 
             base.OnExit(e);
 
-            foreach (IApplicationLifetimeAware service in this.ApplicationLifetimeObjects.OfType<IApplicationLifetimeAware>())
+            foreach (IApplicationService _service in this.ApplicationLifetimeObjects)
             {
-                service.Exiting();
+                if (_service is IApplicationLifetimeAware)
+                {
+                    ((IApplicationLifetimeAware)_service).Exited();
+                }
+                _service.StopService();
             }
         }
 
