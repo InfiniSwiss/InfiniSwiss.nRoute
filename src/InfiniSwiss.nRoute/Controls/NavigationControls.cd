@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Controls.NavigationContainer" Collapsed="true">
+    <Position X="4.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEggAIAABAAABAAAAgAEAoCAAAAAAAAAEAQAAAgACA=</HashCode>
+      <FileName>Controls\NavigationContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.NavigationContentControl" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAMQAAAgIBABMAFQhSCEAMCgAQAAKAACEASAABAAAk=</HashCode>
+      <FileName>Controls\NavigationContentControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.StatefulContainer" Collapsed="true">
+    <Position X="4.25" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAIEAAAAEACiAAAEAAEAAAEAAAAAAAA=</HashCode>
+      <FileName>Controls\StatefulContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Controls.BrowsingContainer" Collapsed="true">
+    <Position X="1.5" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAwABAAAAAAAgAJFAAABEgCCAAAAIEFAAAFAAABAAAA=</HashCode>
+      <FileName>Controls\BrowsingContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Behaviors.NavigationAdapterBehaviorBase&lt;T&gt;" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAsAAAAkoAAAMAVAhSCAAAAgAQAAKAACEASAABAACE=</HashCode>
+      <FileName>Behaviors\NavigationAdapterBehaviorBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Behaviors.ItemsControlNavigationAdapterBehavior" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAEAACBAAAAAAAAAAAAIAAAAI=</HashCode>
+      <FileName>Behaviors\ItemsControlNavigationAdapterBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Controls.StatefulBrowsingContainer" Collapsed="true">
+    <Position X="7" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEwABAAAAAAAgAJFAAABEgCiAAAEIEHAAAFAAABAAAA=</HashCode>
+      <FileName>Controls\StatefulBrowsingContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Behaviors.ContentControlNavigationAdapterBehavior" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEgAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\ContentControlNavigationAdapterBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Behaviors.PanelNavigationAdapterBehavior" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEgAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors\PanelNavigationAdapterBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Navigation.INavigationHandler" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Navigation\INavigationHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

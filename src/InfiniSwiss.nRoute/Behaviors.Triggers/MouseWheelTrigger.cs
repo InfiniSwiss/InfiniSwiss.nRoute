@@ -12,8 +12,9 @@ namespace nRoute.Behaviors.Triggers
          : TriggerBase<UIElement>
     {
         private const string DELTAFACTOR_NOTBE_LESSTHANZERO = "DeltaFactor cannot be less than 0";
+        private const string THROTTLE_NOTBE_LESSTHANZERO = "Throttle cannot be zero or negative duration.";
         private const double DEFAULT_DELTAFACTOR = 120d;
-        private static readonly Duration DURATION_ZERO = new(TimeSpan.Zero);
+        private static readonly Duration DURATION_ZERO = new Duration(TimeSpan.Zero);
 
         public static readonly DependencyProperty DeltaFactorProperty =
             DependencyProperty.Register("DeltaFactor", typeof(object), typeof(MouseWheelTrigger),
@@ -55,6 +56,10 @@ namespace nRoute.Behaviors.Triggers
             _mouseWheelHandler = new Handler<MouseWheelEventArgs, MouseWheelEventHandler>(OnMouseWheel,
                     (h) => AssociatedObject.MouseWheel -= h);
             AssociatedObject.MouseWheel += _mouseWheelHandler;
+
+            // if throttling is required
+            if (Throttle.HasTimeSpan && Throttle != TimeSpan.MaxValue && Throttle > TimeSpan.Zero)
+                _mouseWheelHandler.Throttle(Throttle.TimeSpan);
         }
 
         protected override void OnDetaching()

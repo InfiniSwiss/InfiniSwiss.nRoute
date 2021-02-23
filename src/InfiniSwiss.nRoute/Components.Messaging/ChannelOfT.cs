@@ -18,9 +18,9 @@ namespace nRoute.Components.Messaging
 
         private readonly static Channel<T> _publicChannel;
         private readonly static Dictionary<string, IChannel<T>> _privateChannels;
-        private readonly static object _channelsLock = new();
+        private readonly static Object _channelsLock = new object();
 
-        private readonly object _instanceLock = new();
+        private readonly Object _instanceLock = new Object();
         private readonly List<ChannelSubscriptionBase<T>> _subscriptions;
 
         #endregion
@@ -205,9 +205,16 @@ namespace nRoute.Components.Messaging
         {
             Guard.ArgumentNotNull(subscriber, "subscriber");
 
-            ChannelSubscriptionBase<T> _subscription = useWeakReference
-                ? new WeakChannelSubscription<T>(threadOption, subscriber)
-                : new ChannelSubscription<T>(threadOption, subscriber);
+            ChannelSubscriptionBase<T> _subscription = null;
+            if (useWeakReference)
+            {
+                _subscription = new WeakChannelSubscription<T>(threadOption, subscriber);
+            }
+            else
+            {
+                _subscription = new ChannelSubscription<T>(threadOption, subscriber);
+            }
+
             lock (_instanceLock)
             {
                 // we add it to our collection
@@ -271,29 +278,39 @@ namespace nRoute.Components.Messaging
                 }
                 else
                 {
-                    switch (_subscription.ThreadOption)
+                    try
                     {
-                        case ThreadOption.PublisherThread:
-                            _subscriber.OnNext(value);
-                            break;
-
-                        case ThreadOption.UIThread:
-                            if (_dispatcher.CheckAccess())
-                            {
+                        switch (_subscription.ThreadOption)
+                        {
+                            case ThreadOption.PublisherThread:
+                                //_synchronizationContext.Send((s) => _publishAction(), null);  //<--- SLOW
                                 _subscriber.OnNext(value);
-                            }
-                            else
-                            {
-                                _dispatcher.BeginInvoke(new Action(() => _subscriber.OnNext(value)));
-                            }
-                            break;
+                                break;
 
-                        case ThreadOption.BackgroundThread:
-                            ThreadPool.QueueUserWorkItem(new WaitCallback((o) => _subscriber.OnNext(value)));
-                            break;
+                            case ThreadOption.UIThread:
+                                //_dispatcherContext.Post((s) => publishAction(_subscriber), null); //<--- SLOW
+                                if (_dispatcher.CheckAccess())
+                                {
+                                    _subscriber.OnNext(value);
+                                }
+                                else
+                                {
+                                    _dispatcher.BeginInvoke(new Action(() => _subscriber.OnNext(value)));
+                                }
+                                break;
 
-                        default:
-                            throw new NotSupportedException();
+                            case ThreadOption.BackgroundThread:
+                                ThreadPool.QueueUserWorkItem(new WaitCallback((o) => _subscriber.OnNext(value)));
+                                break;
+
+                            default:
+                                throw new NotSupportedException();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debugger.Break();
+                        throw;
                     }
                 }
             }

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.SiteMaps.SiteArea" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQQAAAgAAAAAAAIQAEAAAAQAAAAAAA=</HashCode>
+      <FileName>SiteMaps\SiteArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.SiteMapNode" Collapsed="true">
+    <Position X="2" Y="3.75" Width="2" />
+    <Members>
+      <Method Name="Execute" Hidden="true" />
+      <Field Name="KEY_CANONLY_BESETONCE" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAEIAEBAAAAgAkQkEAGECEEAEACAAAAAAECAAAAAAAA=</HashCode>
+      <FileName>SiteMaps\SiteMapNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ChildNodes" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="nRoute.SiteMaps.SiteMap">
+    <Position X="4.25" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_areas" Hidden="true" />
+      <Field Name="_rootNode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>SiteMaps\SiteMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.AreasCollection" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SiteMaps\AreasCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.NavigationNode" Collapsed="true">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAQAAgAAAAAAAAAAAAAQCAAACAAACAA=</HashCode>
+      <FileName>SiteMaps\NavigationNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.NodesCollection" Collapsed="true">
+    <Position X="2" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SiteMaps\NodesCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.ControllerActionNode" Collapsed="true">
+    <Position X="3.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAQAAgAAAAAAAAAAAAAQCAAACAAACAA=</HashCode>
+      <FileName>SiteMaps\ControllerActionNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.SiteAreaInfo" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAABAAAAAA=</HashCode>
+      <FileName>SiteMaps\SiteAreaInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.AreaInfosCollection" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SiteMaps\AreaInfosCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.XamlSiteMapProvider" Collapsed="true">
+    <Position X="10.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAIBAQAAAAAAABAAAAA=</HashCode>
+      <FileName>SiteMaps\XamlSiteMapProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.SiteMaps.XmlSiteMapProvider" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAIAAEAEBAAAAAAABCAAAAAAA=</HashCode>
+      <FileName>SiteMaps\XmlSiteMapProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.SiteMaps.SiteMapService">
+    <Position X="13.25" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_siteMap" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="InitializeOnLoadSiteAreas" Hidden="true" />
+      <Method Name="ResolveFlattenedDependentSiteAreas" Hidden="true" />
+      <Method Name="ResolveKeyedSiteMapNode" Hidden="true" />
+      <Method Name="TopologicallyOrderDependentSiteAreas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAEAAAQAgAAQAEAAACgCAASgAAAAAAQAQIAA=</HashCode>
+      <FileName>SiteMaps\SiteMapService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.CommandNode" Collapsed="true">
+    <Position X="1.75" Y="6" Width="2.25" />
+    <InheritanceLine Type="nRoute.SiteMaps.SiteMapNode" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="4.441" />
+        <Point X="3" Y="6" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAQACAAARIAAAQAABAACAAAABAAAAAA=</HashCode>
+      <FileName>SiteMaps\CommandNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.SiteMaps.SiteMaps">
+    <Position X="13.25" Y="4" Width="2.5" />
+    <Members>
+      <Method Name="GetPrimary" Hidden="true" />
+      <Method Name="GetSecondary" Hidden="true" />
+      <Method Name="SetPrimary" Hidden="true" />
+      <Method Name="SetSecondary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAIEkAABAAAAQIAAAAABAABAAACIAIgIAAQAAAAAAA=</HashCode>
+      <FileName>SiteMaps\SiteMaps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.SiteMaps.ISiteMapProvider">
+    <Position X="10.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SiteMaps\ISiteMapProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

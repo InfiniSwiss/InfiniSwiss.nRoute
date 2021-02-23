@@ -24,6 +24,21 @@ namespace nRoute.Components
             return command;
         }
 
+        public static T RequeryOnPropertyChanged<T>(this T command,
+            INotifyPropertyChanged notifiable, Expression<Func<Object>> propertySelector)
+            where
+                T : ICommand, IWeakEventListener
+        {
+            Guard.ArgumentNotDefault(command, "command");
+            Guard.ArgumentNotNull(notifiable, "notifiable");
+            Guard.ArgumentNotNull(propertySelector, "propertySelector");
+
+            // we attach a weak listener to hear for any changes in the property
+            notifiable.PropertyChanged += new WeakListenerHandler<PropertyChangedEventArgs, PropertyChangedEventHandler>
+                (command, (h) => notifiable.PropertyChanged -= h).HandleFor(propertySelector);
+            return command;
+        }
+
         public static T RequeryOnCommandCanExecuteChanged<T>(this T command, ICommand relatedCommand)
             where
                 T : ICommand, IWeakEventListener

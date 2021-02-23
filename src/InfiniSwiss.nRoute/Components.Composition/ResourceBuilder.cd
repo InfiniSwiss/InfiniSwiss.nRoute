@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Components.Composition.TypeDescriptor">
+    <Position X="3.5" Y="2" Width="2.5" />
+    <Members>
+      <Field Name="_constructorProfile" Hidden="true" />
+      <Field Name="_fieldProfiles" Hidden="true" />
+      <Field Name="_profileType" Hidden="true" />
+      <Field Name="_propertyProfiles" Hidden="true" />
+      <Field Name="BUILD_MUSTHAVE_PUBCONST" Hidden="true" />
+      <Field Name="EMPTY_PARAMETERS" Hidden="true" />
+      <Method Name="ProfileConstructorParameters" Hidden="true" />
+      <Method Name="ProfileResolveConstructor" Hidden="true" />
+      <Method Name="ProfileResolveFields" Hidden="true" />
+      <Method Name="ProfileResolveProperties" Hidden="true" />
+      <Field Name="RESOLVECONST_MUSTBE_INSTANCE" Hidden="true" />
+      <Field Name="RESOLVECONST_MUSTBE_PUBLIC" Hidden="true" />
+      <Field Name="RESOLVECONST_ONLYONCE" Hidden="true" />
+      <Field Name="RESOLVEFIELD_MUSTBE_INSTANCE" Hidden="true" />
+      <Field Name="RESOLVEFIELD_MUSTBE_PUBLIC" Hidden="true" />
+      <Field Name="RESOLVEFIELD_MUSTNOTBE_CONSTORREADONLY" Hidden="true" />
+      <Field Name="RESOLVEPROP_MUSTBE_INSTANCE" Hidden="true" />
+      <Field Name="RESOLVEPROP_MUSTBE_PUBLIC" Hidden="true" />
+      <Field Name="RESOLVEPROP_MUSTBE_WRITABLE" Hidden="true" />
+      <Method Name="TypeDescriptor" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="nRoute.Components.Composition.TypeDescriptor.ConstructorDescriptor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\TypeDescriptor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.TypeDescriptor.FieldDescriptor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\TypeDescriptor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.TypeDescriptor.PropertyResolveProfile" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\TypeDescriptor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.TypeDescriptor.ParameterDescriptor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\TypeDescriptor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="nRoute.Components.Composition.TypeDescriptor.TypeResourceResolver" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components.Composition\TypeDescriptor.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACEAAAIAAigAEAAAIAAABAAAgCAEoAUABEAAAAgABgo=</HashCode>
+      <FileName>Components.Composition\TypeDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.ResolveResourceAttribute" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\ResolveResourceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.ResolveResourceBaseAttribute" Collapsed="true">
+    <Position X="0.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAQAAAAAAggAAAAABEAAAQIAA=</HashCode>
+      <FileName>Components.Composition\ResolveResourceBaseAttribute.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Composition.ResolveConstructorAttribute" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\ResolveConstructorAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.TypeBuilder">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_buildersCache" Hidden="true" />
+      <Field Name="_lock" Hidden="true" />
+      <Field Name="BUILD_MUSTBE_PUBLIC" Hidden="true" />
+      <Field Name="BUILD_MUSTNOTBE_ABSTRACT" Hidden="true" />
+      <Field Name="BUILD_MUSTNOTBE_STATIC" Hidden="true" />
+      <Method Name="CreateProfiledBuilder" Hidden="true" />
+      <Method Name="TypeBuilder" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAABgJAAAAAAEAIEAAIAAAAA=</HashCode>
+      <FileName>Components.Composition\TypeBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Composition.ResolveResourceException" Collapsed="true">
+    <Position X="3.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Components.Composition\ResolveResourceException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="nRoute.Components.Composition.IResolveTarget">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Composition\IResolveTarget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

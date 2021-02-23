@@ -190,6 +190,10 @@ namespace nRoute.Controls
             CurrentNavigationStateSupporter = NavigationService.GetSupporter<ISupportNavigationState>(response.Content);
             CurrentNavigationViewStateSupporter = NavigationService.GetSupporter<ISupportNavigationViewState>(response.Content);
 
+            // we save the url and the content
+            CurrentNavigationRequest = response.Request;
+            SetValue(ContentProperty, response.Content);
+            
             // if the content support navigation, we pass in the request/response merged parameters
             if (this.CurrentNavigationLifecycleSupporter != null)
             {
@@ -222,9 +226,6 @@ namespace nRoute.Controls
                 }
             }
 
-            // we save the url and the content
-            CurrentNavigationRequest = response.Request;
-            SetValue(ContentProperty, response.Content);
 
             // and raise the event navigation completed
             OnNavigationCompleted(new NavigatedEventArgs(this, response.Request));

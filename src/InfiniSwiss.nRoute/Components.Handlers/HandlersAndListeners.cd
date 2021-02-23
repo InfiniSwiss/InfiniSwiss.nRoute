@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nRoute.Components.Handlers.Handler&lt;E, H&gt;" Collapsed="true">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>Components.Handlers\Handler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Handlers.WeakHandler&lt;E, H&gt;" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.25" />
+    <InheritanceLine Type="nRoute.Components.Handlers.HandlerBase&lt;E, H&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.375" Y="1.062" />
+        <Point X="4.375" Y="1.592" />
+        <Point X="3.05" Y="1.592" />
+        <Point X="3.05" Y="2.95" />
+        <Point X="1.625" Y="2.95" />
+        <Point X="1.625" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAAAACAAQAAAAAJAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Handlers\Handler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Handlers.ObserverHandler&lt;E, H&gt;" Collapsed="true">
+    <Position X="3.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAACAAIAAAAAAAAACAA=</HashCode>
+      <FileName>Components.Handlers\ObserverHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Handlers.ListenerHandler&lt;E, H&gt;" Collapsed="true">
+    <Position X="6" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Handlers\ListenerHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Handlers.WeakListenerHandler&lt;E, H&gt;" Collapsed="true">
+    <Position X="6" Y="3.25" Width="2.25" />
+    <InheritanceLine Type="nRoute.Components.Handlers.HandlerBase&lt;E, H&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.375" Y="1.062" />
+        <Point X="4.375" Y="1.602" />
+        <Point X="5.7" Y="1.602" />
+        <Point X="5.7" Y="2.95" />
+        <Point X="7.125" Y="2.95" />
+        <Point X="7.125" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACACAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Handlers\ListenerHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Handlers.EventDelegateInvoker&lt;E&gt;" Collapsed="true">
+    <Position X="8.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAgAABAAACAAABAAAJAAAEAAEACAAA=</HashCode>
+      <FileName>Components.Handlers\EventDelegatesInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nRoute.Components.Handlers.WeakObserverHandler&lt;E, H&gt;" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="2.25" />
+    <InheritanceLine Type="nRoute.Components.Handlers.HandlerBase&lt;E, H&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.375" Y="1.062" />
+        <Point X="4.375" Y="1.55" />
+        <Point X="3.05" Y="1.55" />
+        <Point X="3.05" Y="2.95" />
+        <Point X="4.375" Y="2.95" />
+        <Point X="4.375" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAACAAIAAAAAAAAACAA=</HashCode>
+      <FileName>Components.Handlers\ObserverHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Handlers.HandlerBase&lt;E, H&gt;" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAGAACAAEAIABAADAAAAAAAIIAAAAAQIBAAA=</HashCode>
+      <FileName>Components.Handlers\HandlerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nRoute.Components.Handlers.HandlerExtensions">
+    <Position X="8.75" Y="3" Width="2.5" />
+    <Members>
+      <Field Name="HANDLECOUNT_OUTOFRANGE" Hidden="true" />
+      <Field Name="HANDLER_PERIODLESSTHANZERO" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAAIAAACAAAAQAFAABBEAEAAAAAAIAAABAAAAAAAA=</HashCode>
+      <FileName>Components.Handlers\HandlerExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="nRoute.Components.Handlers.EventDelegate&lt;E&gt;" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components.Handlers\EventDelegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="nRoute.Components.Handlers.EventDelegate&lt;T, E&gt;" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Components.Handlers\EventDelegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

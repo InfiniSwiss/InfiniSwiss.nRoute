@@ -10,7 +10,7 @@ namespace nRoute.Behaviors.Triggers
     public class KeyTrigger
          : TriggerBase<UIElement>
     {
-        private static readonly Duration DURATION_ZERO = new(TimeSpan.Zero);
+        private static readonly Duration DURATION_ZERO = new Duration(TimeSpan.Zero);
 
         public static readonly DependencyProperty KeyEventProperty =
            DependencyProperty.Register("KeyEvent", typeof(KeyEventType), typeof(KeyTrigger),
@@ -157,6 +157,10 @@ namespace nRoute.Behaviors.Triggers
                     (h) => AssociatedObject.KeyDown -= h);
                 AssociatedObject.KeyDown += _keyHandler;
             }
+
+            // if throttling is required
+            if (Throttle.HasTimeSpan && Throttle != TimeSpan.MaxValue && Throttle > TimeSpan.Zero)
+                _keyHandler.Throttle(Throttle.TimeSpan);
         }
 
         protected override void OnDetaching()

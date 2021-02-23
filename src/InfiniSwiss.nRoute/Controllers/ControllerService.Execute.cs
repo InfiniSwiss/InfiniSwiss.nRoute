@@ -55,11 +55,17 @@ namespace nRoute.Controllers
 
             Resolve(actionRequest, (r) =>
             {
-                contextCallback?.Invoke(r);
-                statusCallback?.Invoke(r.Status);
+                if (contextCallback != null)
+                {
+                    contextCallback(r);
+                }
+                if (statusCallback != null)
+                {
+                    statusCallback(r.Status);
+                }
                 if (r.Controller != null)
                 {
-                    r.Controller?.Execute(r);
+                    r.Controller.Execute(r);
                 }
                 else if (r.Status != ResponseStatus.Success && r.Status != ResponseStatus.Cancelled)
                 {

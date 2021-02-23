@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace nRoute.Services
 {
@@ -10,5 +11,9 @@ namespace nRoute.Services
         Task BeginInvoke(Delegate method);
 
         TResult Invoke<TResult>(Func<TResult> method);
+
+        DispatcherOperation<TResult> InvokeAsync<TResult>(Func<TResult> callback);
+
+        DispatcherOperation InvokeAsync(Action callback);
     }
 }

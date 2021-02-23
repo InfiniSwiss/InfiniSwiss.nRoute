@@ -3,7 +3,7 @@
     public class EmptyResult
         : ActionResult
     {
-        private static readonly EmptyResult EMPTY_RESULT_INSTANCE = new();
+        private static readonly EmptyResult EMPTY_RESULT_INSTANCE = new EmptyResult();
 
         public EmptyResult()
             : base() { }
